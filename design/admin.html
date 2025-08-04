@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - NAJU SHOPPING CENTRE</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <script defer src="admin.js"></script>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="image.PNG" alt="Naju Logo" />
+    </div>
+    <h1 class="site-title">NAJU SHOPPING CENTRE</h1>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="admin.html" class="active">Admin</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="admin-container" id="login-section">
+      <h2>Admin Login</h2>
+      <input type="password" id="admin-password" placeholder="Enter admin password" />
+      <button onclick="checkPassword()">Login</button>
+      <p class="error-msg" id="login-error"></p>
+    </div>
+
+    <div class="admin-container" id="upload-section" style="display:none;">
+      <h2>Upload New Product</h2>
+      <form id="upload-form" action="upload_product.php" method="POST" enctype="multipart/form-data">
+        <input type="text" name="name" placeholder="Product Name" required />
+        <input type="text" name="price" placeholder="Price or Description" required />
+        <input type="file" name="image" accept="image/*" required />
+        <button type="submit">Upload Product</button>
+        <p id="success-msg" style="margin-top: 10px;"></p>
+      </form>
+    </div>
+    
+  </main>
+
+  <footer class="footer">
+    <div class="social-buttons">
+      <a href="https://wa.me/256772517955" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.tiktok.com/@najulife" target="_blank" class="tiktok"><i class="fab fa-tiktok"></i></a>
+      
+    </div>
+    <p><strong>Masindi District, Commercial Street</strong></p>
+    <p>&copy; 2025 <strong>NAJU SHOPPING CENTRE</strong>. All rights reserved.</p>
+  </footer>
+</body>
+</html>
